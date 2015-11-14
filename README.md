@@ -94,3 +94,9 @@ ENT:LoadXP()		-- Loads level and XP
 The following hooks are available:
 
 PlayerLevelUp 		-- Called when a player levels up, with ply and lvl as params
+
+-------------------------------
+-----------Liscence------------
+-------------------------------
+
+You are allowed to change/modify/distribute these files at your own will. 
