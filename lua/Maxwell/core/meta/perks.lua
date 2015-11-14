@@ -2,7 +2,7 @@ local pm = FindMetaTable( 'Player' )
 
 function pm:FetchPerks()
 
-	if (self.Maxwellperks == nil) then self.Maxwellperks = {} end --Safety
+	if (self.Maxwellperks == nil) then self.vlomsperks = {} end --Safety
 
 	for i=1,#Maxwell.Perks do
 		

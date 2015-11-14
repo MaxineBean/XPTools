@@ -7,7 +7,7 @@ local pm = FindMetaTable("Player")
 
 // XP and Level
 
-function pm:NetStats()
+function pm:VNetStats()
 
 	local plystats = {}
 	plystats['lvl'] = self.Maxwelllvl

@@ -28,7 +28,7 @@ local function BaseHUDOne()
 
 end
 
-local function BaseHUDTwo()
+local function VBaseHUDTwo()
 
 	draw.RoundedBox( 0, 400, ScreenH-18, ScreenW - 800, 12, Color(0, 80, 0, 255) )  --Background 5
 	draw.RoundedBox( 0, 402, ScreenH-16, ScreenW - 804, 8, Color(190, 190, 190, 255) ) --Background 6

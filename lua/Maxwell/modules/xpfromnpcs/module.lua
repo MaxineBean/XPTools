@@ -1,15 +1,12 @@
 if SERVER then
+hook.Add('OnNPCKilled', 'XPFromNPCKill', function(attacker, inflictor)
 
-	CreateConVar( 'Maxwell_npckillxp', 5, FCVAR_NOTIFY, 'How much XP you get for killing an NPC' ) 
-
-	hook.Add('OnNPCKilled', 'XPFromNPCKill', function(attacker, inflictor)
-
-		if (inflictor:IsPlayer() && IsValid(inflictor)) then
-			
-			inflictor:GiveXP( GetConVarNumber( 'Maxwell_npckillxp' ) )
-
-		end
-
-	end)
-
+	if (inflictor:IsPlayer() && IsValid(inflictor)) then
+	
+		inflictor:GiveXP(Maxwell.XPAmountFromNPCs)
+		SendUserMessage( "NPCDeath", 'attacker', 'You got '.. Maxwell.XPAmountFromNPCs ..'XP for killing an NPC.')
+	else 
+	
+	end
+	
 end

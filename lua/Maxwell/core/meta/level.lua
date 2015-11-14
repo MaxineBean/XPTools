@@ -12,9 +12,13 @@ function pm:GiveXP( amount )
 
 	if amount <= 0 then return end --No point
 
+	if Maxwell.GroupAllXP then
+		amount = math.Round(amount * self:GetXPRate(), 1)
+	end
+
 	//Give XP
 
-	local newxp = self.Maxwellxp + amount
+	local newxp = self.xp + amount
 	local xpreq = CalcXPReq(self.Maxwelllvl)
 
 	--Network it to the player
@@ -22,7 +26,7 @@ function pm:GiveXP( amount )
 
 	if (newxp < xpreq) then
 
-		self.Maxwellxp = newxp
+		self.xp = newxp
 
 	else
 
@@ -39,7 +43,7 @@ function pm:SetXP( amount )
 
 	if amount < 0 then return end --No point
 
-	self.Maxwellxp = amount
+	self.xp = amount
 
 	--Network it
 	self:NetStats()
@@ -48,7 +52,7 @@ function pm:SetXP( amount )
 
 end
 
-function pm:GetGroupMuptipler()
+function pm:GetXPRate()
 
 	for i=1, #Maxwell.GroupXPRates do
 		if self:IsUserGroup(Maxwell.GroupXPRates[i][1]) then
@@ -58,15 +62,6 @@ function pm:GetGroupMuptipler()
 
 	return 1
 
-end
-
-function pm:GetGroupAmount()
-	
-	for i=1, #Maxwell.GroupXPAmount do
-		if self:IsUserGroup(Maxwell.GroupXPAmount[i][1]) then
-			return Maxwell.GroupXPAmount[i][2]
-		end
-	end
 end
 
 -------------------------------
@@ -113,7 +108,7 @@ end
 function pm:Reset()
 
 	self.Maxwelllvl = 1
-	self.Maxwellxp = 0
+	self.xp = 0
 
 	self:SaveXP()
 
@@ -127,7 +122,7 @@ end
 function pm:LevelUp()
 
 	self.Maxwelllvl = self.Maxwelllvl + 1
-	self.Maxwellxp = 0
+	self.xp = 0
 
 	self:FetchPerks()
 
