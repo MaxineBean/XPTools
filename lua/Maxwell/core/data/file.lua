@@ -1,5 +1,5 @@
-if !file.Exists( "maxwell", "DATA" ) then
+if !file.Exists( "Maxwell", "DATA" ) then
 
-	file.CreateDir( "maxwell" )
+	file.CreateDir( "Maxwell" )
 
 end
