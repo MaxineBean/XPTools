@@ -210,15 +210,15 @@ if (Maxwell.AutoXP) then
 					
 				end
 			
-			elseif (Maxwell.IncreasedXPHighLevel) and (Maxwell.CustomGroupXP) and (Maxwell.GroupAutoXP) then
-			
+			elseif (Maxwell.IncreasedXPHighLevel) and (Maxwell.CustomGroupXP) and (Maxwell.GroupAutoXP) and if (self.IsUserGroup(Maxwell.GroupXPAmount[1])) end then
+							
 				if v:PlayerLevel() < '10' then
 					
 					v:GiveXP(Maxwell.AutoXPAmount)
 				
 				elseif v:PlayerLevel() >= '10' and v:PlayerLevel() < '20' then
 				
- 					v:GiveXP(math.Round(v:GetGroupAmount() +10 * v:GetGroupMuptipler(), 1))
+ 					v:GiveXP(math.Round(v:GetGroupAmount()+10 * v:GetGroupMuptipler(), 1))
 			
 				elseif v:PlayerLevel() >= '20' and v:PlayerLevel() < '30' then
 			
