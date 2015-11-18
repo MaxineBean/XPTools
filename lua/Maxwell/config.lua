@@ -1,7 +1,7 @@
 Maxwell = {}
 Maxwell.Version = '1.0.0'
 
-Maxwell.DataType = 'pdata' --How to save / load data
+Maxwell.DataType = 'pdata' --How to save / load data DO NOT CHANGE!
 
 Maxwell.Logging = true --Log events like players leaving etc
 Maxwell.LoggingExtensive = true --More detailed logging
@@ -15,7 +15,8 @@ Maxwell.GroupXPRates = { //Sets Mulptipler for XP
 	{'VIP', 2}
 } 
 Maxwell.CustomGroupXP = true --Enables Custom XP gains for groups
-Maxwell.GroupXPAmount = { //Sets the Amount of XP a Group gets, overrides AutoXPAmount, Groups in GroupXPRates HAVE to bee listed here too but with the base amount of xp they get, GroupXPRates will then muptiply that
+Maxwell.GroupXPAmount = { //Sets the Amount of XP a Group gets, overrides AutoXPAmount, Groups in GroupXPRates HAVE to bee listed here
+						  //too but with the base amount of xp they get,GroupXPRates will then muptiply that. ALL GROUPS NEED TO BE LISTED HERE!
 	{'Owner', 500},
 	{'superadmin', 250},
 	{'VIP', 100}
