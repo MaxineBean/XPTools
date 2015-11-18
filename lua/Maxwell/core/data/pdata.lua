@@ -1,13 +1,13 @@
 local pm = FindMetaTable( 'Player' )
 
-function pm:VSaveXP()
+function pm:SaveXP()
 
 	self:SetPData( 'Maxwellxp', self.Maxwellxp )
 	self:SetPData( 'Maxwelllvl', self.Maxwelllvl )
 
 end
 
-function pm:VLoadXP()
+function pm:LoadXP()
 
 	self.Maxwellxp = self:GetPData( 'Maxwellxp', 0 )
 	self.Maxwelllvl = self:GetPData( 'Maxwelllvl', 1 )

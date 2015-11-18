@@ -8,7 +8,5 @@ if SERVER then
 			ply:ConCommand( 'perks' ) 
 			return false
 		end
-
 	end )
-
-end
+end 

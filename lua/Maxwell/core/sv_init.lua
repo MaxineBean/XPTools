@@ -1,23 +1,23 @@
 include('Maxwell/config.lua')
---[[
-function include(file)
+
+function Vinclude(file)
 
 	--Fancy way of including so it prints to console
 	print(file)
 	include(file)
 
 end
-]]--
+
 function Log(msg)
 
 	if !(Maxwell.Logging) then return end
 
-	print('Maxwell LOG: ' .. msg)
+	print('MAXWELL LOG: ' .. msg)
 
 end
 
 print('\n\n----------------------------------------')
-print('---------Maxwell v' .. Maxwell.Version .. ' by Maxwell----------')
+print('------- XP-Tools v' .. Maxwell.Version .. ' by Maxwell------')
 print('----------------------------------------\n')
 
 /*

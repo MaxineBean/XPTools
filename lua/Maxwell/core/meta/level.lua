@@ -12,13 +12,9 @@ function pm:GiveXP( amount )
 
 	if amount <= 0 then return end --No point
 
-	if Maxwell.GroupAllXP then
-		amount = math.Round(amount * self:GetXPRate(), 1)
-	end
-
 	//Give XP
 
-	local newxp = self.xp + amount
+	local newxp = self.Maxwellxp + amount
 	local xpreq = CalcXPReq(self.Maxwelllvl)
 
 	--Network it to the player
@@ -26,7 +22,7 @@ function pm:GiveXP( amount )
 
 	if (newxp < xpreq) then
 
-		self.xp = newxp
+		self.Maxwellxp = newxp
 
 	else
 
@@ -43,7 +39,7 @@ function pm:SetXP( amount )
 
 	if amount < 0 then return end --No point
 
-	self.xp = amount
+	self.Maxwellxp = amount
 
 	--Network it
 	self:NetStats()
@@ -51,17 +47,44 @@ function pm:SetXP( amount )
 	Log('Set xp of ' .. self:Nick() .. '(' .. self:SteamID() .. ')' .. ' to ' .. amount)
 
 end
+if (Maxwell.GroupAutoXP) then
 
-function pm:GetXPRate()
+	function pm:GetGroupMuptipler()
 
-	for i=1, #Maxwell.GroupXPRates do
-		if self:IsUserGroup(Maxwell.GroupXPRates[i][1]) then
-			return Maxwell.GroupXPRates[i][2]
+		for i=1, #Maxwell.GroupXPRates do
+			if self:IsUserGroup(Maxwell.GroupXPRates[i][1]) then
+				return Maxwell.GroupXPRates[i][2]
+			end
 		end
+
+		return 1
+
 	end
+end
 
-	return 1
+if (Maxwell.CustomGroupXP) then
+	function pm:GetGroupAmount()
+	
+		for i=1, #Maxwell.GroupXPAmount do
+			if self:IsUserGroup(Maxwell.GroupXPAmount[i][1]) then
+				return Maxwell.GroupXPAmount[i][2]
+			end
+		end
+	
+		return 1
+	
+	end
+end
 
+function pm:PlayerLevel()
+	local Level = tostring(self.Maxwelllvl)
+	if Level == nil then return end
+	return Level
+end
+
+function pm:PlayerLevelHUD()
+	local Level2 = tonumber(self.Maxwelllvl)
+	return Level2
 end
 
 -------------------------------
@@ -105,10 +128,10 @@ end
 ----------RESET USER----------
 ------------------------------
 
-function pm:Reset()
+function pm:ResetLvl()
 
 	self.Maxwelllvl = 1
-	self.xp = 0
+	self.Maxwellxp = 0
 
 	self:SaveXP()
 
@@ -122,7 +145,7 @@ end
 function pm:LevelUp()
 
 	self.Maxwelllvl = self.Maxwelllvl + 1
-	self.xp = 0
+	self.Maxwellxp = 0
 
 	self:FetchPerks()
 

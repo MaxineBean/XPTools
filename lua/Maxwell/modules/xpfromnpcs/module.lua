@@ -1,12 +1,11 @@
 if SERVER then
-hook.Add('OnNPCKilled', 'XPFromNPCKill', function(attacker, inflictor)
+	if (Maxwell.XPFromNPCs) then
+		hook.Add('OnNPCKilled', 'SendUserMessage', function(attacker, inflictor)
+			if (inflictor:IsPlayer() && IsValid(inflictor)) then
+				inflictor:GiveXP(Maxwell.XPAmountFromNPCs)
+				inflictor:PrintMessage(HUD_PRINTTALK,"You got " .. Maxwell.XPAmountFromNPCs .. " XP for killing an NPC.")
 
-	if (inflictor:IsPlayer() && IsValid(inflictor)) then
-	
-		inflictor:GiveXP(Maxwell.XPAmountFromNPCs)
-		SendUserMessage( "NPCDeath", 'attacker', 'You got '.. Maxwell.XPAmountFromNPCs ..'XP for killing an NPC.')
-	else 
-	
+			end
+		end)
 	end
-	
 end

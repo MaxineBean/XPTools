@@ -19,10 +19,10 @@ function ulx.givexp( calling_ply, target_plys, amount )
 end
 
 local givexp = ulx.command( CATEGORY_NAME, "ulx givexp", ulx.givexp, "!givexp" )
-givexp:addParam{ type=ULib.cmds.PlayersArg }
-givexp:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="experience", ULib.cmds.optional, ULib.cmds.round }
-givexp:defaultAccess( ULib.ACCESS_SUPERADMIN )
-givexp:help( "Grants target(s) given amount of experience" )
+	givexp:addParam{ type=ULib.cmds.PlayersArg }
+	givexp:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="experience", ULib.cmds.optional, ULib.cmds.round }
+	givexp:defaultAccess( ULib.ACCESS_SUPERADMIN )
+	givexp:help( "Grants target(s) given amount of experience" )
 
 /*
 	SET XP
@@ -43,10 +43,10 @@ function ulx.setxp( calling_ply, target_plys, amount )
 end
 
 local setxp = ulx.command( CATEGORY_NAME, "ulx setxp", ulx.setxp, "!setxp" )
-setxp:addParam{ type=ULib.cmds.PlayersArg }
-setxp:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="experience", ULib.cmds.optional, ULib.cmds.round }
-setxp:defaultAccess( ULib.ACCESS_SUPERADMIN )
-setxp:help( "Sets target(s) experience to given amount" )
+	setxp:addParam{ type=ULib.cmds.PlayersArg }
+	setxp:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="experience", ULib.cmds.optional, ULib.cmds.round }
+	setxp:defaultAccess( ULib.ACCESS_SUPERADMIN )
+	setxp:help( "Sets target(s) experience to given amount" )
 
 /*
 	GIVE LEVEL
@@ -67,10 +67,10 @@ function ulx.givelvl( calling_ply, target_plys, amount )
 end
 
 local givelvl = ulx.command( CATEGORY_NAME, "ulx givelvl", ulx.givelvl, "!givelvl" )
-givelvl:addParam{ type=ULib.cmds.PlayersArg }
-givelvl:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="levels", ULib.cmds.optional, ULib.cmds.round }
-givelvl:defaultAccess( ULib.ACCESS_SUPERADMIN )
-givelvl:help( "Give target(s) given amount of levels" )
+	givelvl:addParam{ type=ULib.cmds.PlayersArg }
+	givelvl:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="levels", ULib.cmds.optional, ULib.cmds.round }
+	givelvl:defaultAccess( ULib.ACCESS_SUPERADMIN )
+	givelvl:help( "Give target(s) given amount of levels" )
 
 /*
 	SET LEVEL
@@ -106,7 +106,7 @@ function ulx.reset( calling_ply, target_plys )
 
 	for i=1, #target_plys do
 		local v = target_plys[ i ]
-			v:Reset( amount )
+			v:ResetLvl( amount )
 			table.insert( affected_plys, v )
 	end
 
@@ -115,9 +115,9 @@ function ulx.reset( calling_ply, target_plys )
 end
 
 local reset = ulx.command( CATEGORY_NAME, "ulx reset", ulx.reset, "!reset" )
-reset:addParam{ type=ULib.cmds.PlayersArg }
-reset:defaultAccess( ULib.ACCESS_SUPERADMIN )
-reset:help( "Resets target(s)' level and xp" )
+	reset:addParam{ type=ULib.cmds.PlayersArg }
+	reset:defaultAccess( ULib.ACCESS_SUPERADMIN )
+	reset:help( "Resets target(s)' level and xp" )
 
 /*
 	GET USER STATS
@@ -138,9 +138,9 @@ function ulx.stats( calling_ply, target_plys )
 end
 
 local stats = ulx.command( CATEGORY_NAME, "ulx stats", ulx.stats, "!stats" )
-stats:addParam{ type=ULib.cmds.PlayersArg }
-stats:defaultAccess( ULib.ACCESS_ADMIN )
-stats:help( "Print player(s)' stats to chat" )
+	stats:addParam{ type=ULib.cmds.PlayersArg }
+	stats:defaultAccess( ULib.ACCESS_ADMIN )
+	stats:help( "Print player(s)' stats to chat" )
 
 /*
 	GET ALL USER STATS
@@ -183,6 +183,6 @@ function ulx.viewlevel( calling_ply, target_plys )
 end
 
 local viewlevel = ulx.command( CATEGORY_NAME, "ulx viewlevel", ulx.viewlevel, "!viewlevel" )
-viewlevel:addParam{ type=ULib.cmds.PlayersArg }
-viewlevel:defaultAccess( ULib.ACCESS_ALL )
-viewlevel:help( "Print player(s)' level to chat" )
+	viewlevel:addParam{ type=ULib.cmds.PlayersArg }
+	viewlevel:defaultAccess( ULib.ACCESS_ALL )
+	viewlevel:help( "Print player(s)' level to chat" )

@@ -10,6 +10,7 @@ function RegisterPerk( pcat, pname, plvl, pdesc, pfunc )
 	Maxwell.Perks[perkindex]['name'] = pname
 	Maxwell.Perks[perkindex]['lvl'] = plvl
 	Maxwell.Perks[perkindex]['desc'] = pdesc
+	Maxwell.Perks[perkindex]['group'] = pgroup
 
 	Maxwell.PerksFunctions[perkindex] = pfunc --Seperate table because we don't send this to the client
 
