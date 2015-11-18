@@ -5,14 +5,14 @@ local function AddLuaFile( file )
 
 end
 
-AddLuaFile('Maxwell/cl/cl_init.lua')
-AddLuaFile('Maxwell/cl/cl_net.lua')
-AddLuaFile('Maxwell/cl/cl_perks.lua')
-AddLuaFile('Maxwell/cl/ui/fonts.lua')
-AddLuaFile('Maxwell/cl/ui/cl_hud.lua')
-AddLuaFile('Maxwell/cl/ui/cl_perksmenu.lua')
+AddLuaFile('maxwell/cl/cl_init.lua')
+AddLuaFile('maxwell/cl/cl_net.lua')
+AddLuaFile('maxwell/cl/cl_perks.lua')
+AddLuaFile('maxwell/cl/ui/fonts.lua')
+AddLuaFile('maxwell/cl/ui/cl_hud.lua')
+AddLuaFile('maxwell/cl/ui/cl_perksmenu.lua')
 
 // Resources
 
-resource.AddFile('materials/Maxwell/perklocked.png')
-resource.AddFile('materials/Maxwell/perkunlocked.png')
+resource.AddFile('materials/maxwell/perklocked.png')
+resource.AddFile('materials/maxwell/perkunlocked.png')

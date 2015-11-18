@@ -8,12 +8,12 @@ end
 
 if SERVER then
 
-	include('Maxwell/core/sv_init.lua')
+	include('maxwell/core/sv_init.lua')
 
 end
 
 if CLIENT then
 	
-	include('Maxwell/cl/cl_init.lua')
+	include('maxwell/cl/cl_init.lua')
 
 end

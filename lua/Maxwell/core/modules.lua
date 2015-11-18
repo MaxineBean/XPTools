@@ -1,12 +1,12 @@
 function LoadModules()
 
-	local fs, dirs = file.Find( 'Maxwell/modules/*', 'LUA' )
+	local fs, dirs = file.Find( 'maxwell/modules/*', 'LUA' )
 
 	for i=1,#dirs do
 
-		print( 'Maxwell/modules/' .. dirs[i] )
-		AddCSLuaFile( 'Maxwell/modules/' .. dirs[i] .. '/module.lua' )	
-		include( 'Maxwell/modules/' .. dirs[i] .. '/module.lua' )
+		print( 'maxwell/modules/' .. dirs[i] )
+		AddCSLuaFile( 'maxwell/modules/' .. dirs[i] .. '/module.lua' )	
+		include( 'maxwell/modules/' .. dirs[i] .. '/module.lua' )
 
 	end
 

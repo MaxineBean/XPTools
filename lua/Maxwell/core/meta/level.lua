@@ -82,11 +82,6 @@ function pm:PlayerLevel()
 	return Level
 end
 
-function pm:PlayerLevelHUD()
-	local Level2 = tonumber(self.Maxwelllvl)
-	return Level2
-end
-
 -------------------------------
 ---------LVL functions---------
 -------------------------------

@@ -18,25 +18,25 @@ end
 
 function LoadPerks()
 
-	local fs, dirs = file.Find( 'Maxwell/perks/*', 'LUA' )
+	local fs, dirs = file.Find( 'maxwell/perks/*', 'LUA' )
 
 	for i=1,#fs do
 		
-		print( 'Maxwell/perks/' .. fs[i] )
-		AddCSLuaFile( 'Maxwell/perks/' .. fs[i] )
-		include( 'Maxwell/perks/' .. fs[i] )
+		print( 'maxwell/perks/' .. fs[i] )
+		AddCSLuaFile( 'maxwell/perks/' .. fs[i] )
+		include( 'maxwell/perks/' .. fs[i] )
 
 	end
 
 	for i=1, #dirs do
 
-		local perks = file.Find( 'Maxwell/perks/' .. dirs[i] .. '/*.lua', 'LUA' )
+		local perks = file.Find( 'maxwell/perks/' .. dirs[i] .. '/*.lua', 'LUA' )
 
 		for perkid=1,#perks do
 			
-			print( 'Maxwell/perks/' .. dirs[i] .. '/' .. perks[perkid] )
-			AddCSLuaFile( 'Maxwell/perks/' .. dirs[i] .. '/' .. perks[perkid] )
-			include( 'Maxwell/perks/' .. dirs[i] .. '/' .. perks[perkid] )
+			print( 'maxwell/perks/' .. dirs[i] .. '/' .. perks[perkid] )
+			AddCSLuaFile( 'maxwell/perks/' .. dirs[i] .. '/' .. perks[perkid] )
+			include( 'maxwell/perks/' .. dirs[i] .. '/' .. perks[perkid] )
 
 		end
 		

@@ -7,7 +7,7 @@ Maxwell.Logging = true --Log events like players leaving etc
 Maxwell.LoggingExtensive = true --More detailed logging
 
 Maxwell.AutoXP = true --Automatically give XP every interval
-Maxwell.AutoXPInterval = 1 --Interval in seconds
+Maxwell.AutoXPInterval = 60 --Interval in seconds
 Maxwell.AutoXPAmount = 100 --XP to give every interval
 
 Maxwell.GroupAutoXP = true --Enable bonus XP rate ONLY from the auto-XP timer (see above)

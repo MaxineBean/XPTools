@@ -1,4 +1,4 @@
-include('Maxwell/config.lua')
+include('maxwell/config.lua')
 
 function Vinclude(file)
 
@@ -26,18 +26,18 @@ print('----------------------------------------\n')
 
 print('*Loading Core\n')
 
-include('Maxwell/core/data/' .. Maxwell.DataType .. '.lua')
-include('Maxwell/core/meta/level.lua')
+include('maxwell/core/data/' .. Maxwell.DataType .. '.lua')
+include('maxwell/core/meta/level.lua')
 
 if (Maxwell.PerksEnabled) then
-	include('Maxwell/core/meta/perks.lua')
-	include('Maxwell/core/perks.lua')
+	include('maxwell/core/meta/perks.lua')
+	include('maxwell/core/perks.lua')
 end
 
-include('Maxwell/core/timers.lua')
-include('Maxwell/core/hooks.lua')
-include('Maxwell/core/modules.lua')
-include('Maxwell/core/net.lua')
+include('maxwell/core/timers.lua')
+include('maxwell/core/hooks.lua')
+include('maxwell/core/modules.lua')
+include('maxwell/core/net.lua')
 
 /*
 	UI
@@ -45,7 +45,7 @@ include('Maxwell/core/net.lua')
 
 print('\n*Loading Clientside\n')
 
-include('Maxwell/cl/include.lua')
+include('maxwell/cl/include.lua')
 
 /*
 	PERKS

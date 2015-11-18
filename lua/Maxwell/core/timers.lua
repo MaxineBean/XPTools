@@ -286,30 +286,3 @@ if (Maxwell.AutoXP) then
 		end
 	end)
 end		
-
-
-
---[[else
-				v:GiveXP(Maxwell.AutoXPAmount)
-				
-				if (CustomGroupXP) then
-
-					v:GiveXP(v:GetGroupAmount()* v:GetGroupMuptipler())
-					v:GiveXP(math.Round(v:GetGroupAmount() * v:GetGroupMuptipler(), 1))
-
-
-				else
-
-					if (Maxwell.GroupAutoXP) then
-
-						v:GiveXP(math.Round(Maxwell.AutoXPAmount * v:GetGroupMuptipler(), 1))
-
-					else
-
-						v:GiveXP(Maxwell.AutoXPAmount)
-
-					end
-				end
-				
-				
-				]]--
