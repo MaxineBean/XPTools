@@ -56,7 +56,7 @@ hook.Add('PlayerLevelUp', 'LevelUpCheckPerks', function(ply, lvl)
 
 	for i=1,#Maxwell.Perks do
 
-		if (!Maxwell.Perks[i]['cat'] && lvl == Maxwell.Perks[i]['lvl']) then 
+		if (!Maxwell.Perks[i]['cat'] and lvl == Maxwell.Perks[i]['lvl']) then 
 		
 			Maxwell.PerksFunctions[i](ply)
 
