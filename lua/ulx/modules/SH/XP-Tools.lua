@@ -91,10 +91,10 @@ function ulx.setlvl( calling_ply, target_plys, amount )
 end
 
 local setlvl = ulx.command( CATEGORY_NAME, "ulx setlvl", ulx.setlvl, "!setlvl" )
-setlvl:addParam{ type=ULib.cmds.PlayersArg }
-setlvl:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="levels", ULib.cmds.optional, ULib.cmds.round }
-setlvl:defaultAccess( ULib.ACCESS_SUPERADMIN )
-setlvl:help( "Sets target(s) level to given amount" )
+	setlvl:addParam{ type=ULib.cmds.PlayersArg }
+	setlvl:addParam{ type=ULib.cmds.NumArg, min=0, default=0, hint="levels", ULib.cmds.optional, ULib.cmds.round }
+	setlvl:defaultAccess( ULib.ACCESS_SUPERADMIN )
+	setlvl:help( "Sets target(s) level to given amount" )
 
 /*
 	RESET USER
@@ -163,8 +163,8 @@ function ulx.getstats( calling_ply )
 end
 
 local getstats = ulx.command( CATEGORY_NAME, "ulx getstats", ulx.getstats, "!getstats" )
-getstats:defaultAccess( ULib.ACCESS_ADMIN )
-getstats:help( "Print everyone's stats to your console" )
+	getstats:defaultAccess( ULib.ACCESS_ADMIN )
+	getstats:help( "Print everyone's stats to your console" )
 
 /*
 	GET USER LEVEL - for regular players
