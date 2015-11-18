@@ -100,9 +100,9 @@ local function ShowPerks()
 		PerkImage:SetPos( 7, 7 )
 
 		if (Maxwell.Perks[i]['lvl'] <= tonumber(Maxwell.Level)) then
-			PerkImage:SetImage( 'Maxwell/perkunlocked.png' )
+			PerkImage:SetImage( 'maxwell/perkunlocked.png' )
 		else
-			PerkImage:SetImage( 'Maxwell/perklocked.png' )
+			PerkImage:SetImage( 'maxwell/perklocked.png' )
 		end
 
 		local PerkName = vgui.Create( 'DLabel', Perk )
