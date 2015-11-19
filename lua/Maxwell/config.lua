@@ -1,5 +1,5 @@
 Maxwell = {}
-Maxwell.Version = '1.0.5'
+Maxwell.Version = '2.0.0'
 
 Maxwell.DataType = 'pdata' --How to save / load data DO NOT CHANGE!
 
