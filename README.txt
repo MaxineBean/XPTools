@@ -1,5 +1,7 @@
 A free Garry's Mod leveling addon 
 
+Version: 2.0.0
+
 Features: 
 
 -Leveling system (Possible to change required XP formula, and other Formulas) 
