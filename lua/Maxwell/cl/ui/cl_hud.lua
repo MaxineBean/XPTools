@@ -1,5 +1,5 @@
 
-	CreateConVar( 'Maxwell_hudtype', 0, FCVAR_NONE, 'Base HUD variations' ) 
+	CreateConVar( 'Maxwell_hudtype', 0, FCVAR_ARCHIVE, 'Base HUD variations' ) 
 
 	local ScreenW = ScrW()
 	local ScreenH = ScrH()
