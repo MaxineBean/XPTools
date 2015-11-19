@@ -1,8 +1,8 @@
-// Function to calculate required XP
+	// Function to calculate required XP
 
 function CalcXPReq(lvl)
 
-	return math.ceil((lvl * 72 + ((lvl+3) * 1.5)^2))
+	return math.ceil((lvl * 72 + ((lvl+3) * 2)^2))
 
 end
 
