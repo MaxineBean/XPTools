@@ -210,15 +210,15 @@ if (Maxwell.AutoXP) then
 					
 				end
 			
-			elseif (Maxwell.IncreasedXPHighLevel) and (Maxwell.CustomGroupXP) and (Maxwell.GroupAutoXP) and if (self.IsUserGroup(Maxwell.GroupXPAmount[1])) end then
-							
+			elseif (Maxwell.IncreasedXPHighLevel) and (Maxwell.CustomGroupXP) and (Maxwell.GroupAutoXP) then
+			
 				if v:PlayerLevel() < '10' then
 					
 					v:GiveXP(Maxwell.AutoXPAmount)
 				
 				elseif v:PlayerLevel() >= '10' and v:PlayerLevel() < '20' then
 				
- 					v:GiveXP(math.Round(v:GetGroupAmount()+10 * v:GetGroupMuptipler(), 1))
+					v:GiveXP(math.Round(v:GetGroupAmount()+10 * v:GetGroupMuptipler(), 1))
 			
 				elseif v:PlayerLevel() >= '20' and v:PlayerLevel() < '30' then
 			
@@ -229,9 +229,9 @@ if (Maxwell.AutoXP) then
 					v:GiveXP(math.Round(v:GetGroupAmount()+30 * v:GetGroupMuptipler(), 1))
 					
 				elseif v:PlayerLevel() >= '40' and v:PlayerLevel() < '50' then
-					
-					v:GiveXP(math.Round(v:GetGroupAmount()+40* v:GetGroupMuptipler(), 1))
 						
+					v:GiveXP(math.Round(v:GetGroupAmount()+40* v:GetGroupMuptipler(), 1))
+							
 				elseif v:PlayerLevel() >= '50' and v:PlayerLevel() < '60' then
 					
 					v:GiveXP(math.Round(v:GetGroupAmount()+50 * v:GetGroupMuptipler(), 1))
@@ -243,7 +243,7 @@ if (Maxwell.AutoXP) then
 				elseif v:PlayerLevel() >= '70' and v:PlayerLevel() < '80' then
 					
 					v:GiveXP(math.Round(v:GetGroupAmount()+70 * v:GetGroupMuptipler(), 1))
-					
+						
 				elseif v:PlayerLevel() >= '80' and v:PlayerLevel() < '90' then
 					
 					v:GiveXP(math.Round(v:GetGroupAmount()+80 * v:GetGroupMuptipler(), 1))
@@ -265,9 +265,9 @@ if (Maxwell.AutoXP) then
 					v:GiveXP(math.Round(v:GetGroupAmount()+120 * v:GetGroupMuptipler(), 1))
 						
 				elseif v:PlayerLevel() >= '130' and v:PlayerLevel() < '140' then
-					
-					v:GiveXP(math.Round(v:GetGroupAmount()+130 * v:GetGroupMuptipler(), 1))
 						
+					v:GiveXP(math.Round(v:GetGroupAmount()+130 * v:GetGroupMuptipler(), 1))
+					
 				elseif v:PlayerLevel() >= '140' and v:PlayerLevel() < '150' then
 					
 					v:GiveXP(math.Round(v:GetGroupAmount()+140 * v:GetGroupMuptipler(), 1))
@@ -276,6 +276,8 @@ if (Maxwell.AutoXP) then
 					
 					v:GiveXP(math.Round(v:GetGroupAmount()+150 * v:GetGroupMuptipler(), 1))
 					
+					
+					
 				end
 				
 			else 
@@ -283,6 +285,9 @@ if (Maxwell.AutoXP) then
 				v:GiveXP(Maxwell.AutoXPAmount)
 				
 			end
+			
 		end
+		
 	end)
+	
 end		
