@@ -1,6 +1,16 @@
+NOTE: This is the GitHub for XP-Tools Leveling System, and as such, you can get the newest version of the addon here, but that also means that if you download from here, it may not be stable.
+
 A free Garry's Mod leveling addon 
 
-Version: 2.0.0
+Version: 2.0.1
+
+How I breakdown Version numbers: Example V.9.5.7
+
+What this means is, Full Release 9, Beta Release 5, Alpha Release 7.
+Full Release: Should not break your game 
+
+
+
 
 Features: 
 
