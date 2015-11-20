@@ -60,6 +60,19 @@ if (Maxwell.GroupAutoXP) then
 		return 1
 
 	end
+
+	function pm:MaxGetPlayerGroup()
+	
+		for i=1, #Maxwell.GroupXPRates do
+			if self:IsUserGroup(Maxwell.GroupXPRates[i][1]) then
+				return Maxwell.GroupXPRates[i][1]
+			end
+		end
+
+		return 1
+
+	end	
+
 end
 
 if (Maxwell.CustomGroupXP) then
