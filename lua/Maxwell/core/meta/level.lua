@@ -4,9 +4,7 @@
 
 local pm = FindMetaTable( 'Player' )
 
-------------------------------
----------XP functions---------
-------------------------------
+--XP FUNCTIONS--
 
 function pm:GiveXP( amount )
 
@@ -47,6 +45,9 @@ function pm:SetXP( amount )
 	Log('Set xp of ' .. self:Nick() .. '(' .. self:SteamID() .. ')' .. ' to ' .. amount)
 
 end
+
+--GROUP FUNCTIONS--
+
 if (Maxwell.GroupAutoXP) then
 
 	function pm:GetGroupMuptipler()
@@ -61,21 +62,10 @@ if (Maxwell.GroupAutoXP) then
 
 	end
 
-	function pm:MaxGetPlayerGroup()
-	
-		for i=1, #Maxwell.GroupXPRates do
-			if self:IsUserGroup(Maxwell.GroupXPRates[i][1]) then
-				return Maxwell.GroupXPRates[i][1]
-			end
-		end
-
-		return 1
-
-	end	
-
 end
 
 if (Maxwell.CustomGroupXP) then
+
 	function pm:GetGroupAmount()
 	
 		for i=1, #Maxwell.GroupXPAmount do
@@ -87,6 +77,18 @@ if (Maxwell.CustomGroupXP) then
 		return 1
 	
 	end
+	
+	function pm:MaxwellGetPlayerGroup()
+	
+		for i=1, #Maxwell.GroupXPRates do
+			if self:IsUserGroup(Maxwell.GroupXPRates[i][1]) then
+				return true
+			else
+				return false
+			end
+		end
+	end	
+	
 end
 
 function pm:PlayerLevel()
@@ -95,9 +97,7 @@ function pm:PlayerLevel()
 	return Level
 end
 
--------------------------------
----------LVL functions---------
--------------------------------
+--LEVEL FUNCTIONS--
 
 function pm:GiveLevel( amount ) 
 
@@ -132,9 +132,7 @@ function pm:SetLevel( amount )
 
 end
 
-------------------------------
-----------RESET USER----------
-------------------------------
+--RESET FUNCTIONS--
 
 function pm:ResetLvl()
 
@@ -147,8 +145,6 @@ function pm:ResetLvl()
 	self:NetStats()
 
 end
-
-//
 
 function pm:LevelUp()
 
