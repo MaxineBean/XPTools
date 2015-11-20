@@ -26,18 +26,18 @@ print('----------------------------------------\n')
 
 print('*Loading Core\n')
 
-include('maxwell/sv/core/data/' .. Maxwell.DataType .. '.lua')
-include('maxwell/sv/core/meta/level.lua')
+include('maxwell/core/data/' .. Maxwell.DataType .. '.lua')
+include('maxwell/core/meta/level.lua')
 
 if (Maxwell.PerksEnabled) then
-	include('maxwell/sv/core/meta/perks.lua')
+	include('maxwell/core/meta/perks.lua')
 	include('maxwell/core/perks.lua')
 end
 
-include('maxwell/sv/core/timers.lua')
-include('maxwell/sv/core/hooks.lua')
-include('maxwell/sv/core/modules.lua')
-include('maxwell/sv/core/net.lua')
+include('maxwell/core/timers.lua')
+include('maxwell/core/hooks.lua')
+include('maxwell/core/modules.lua')
+include('maxwell/core/net.lua')
 
 /*
 	UI

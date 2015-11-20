@@ -8,7 +8,7 @@ end
 
 if SERVER then
 
-	include('maxwell/sv/core/sv_init.lua')
+	include('maxwell/core/sv_init.lua')
 
 end
 
