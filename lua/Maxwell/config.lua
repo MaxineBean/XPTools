@@ -1,12 +1,12 @@
 Maxwell = {}
-Maxwell.Version = '2.0.0'
+Maxwell.Version = '2.0.1'
 
 Maxwell.DataType = 'pdata' --How to save / load data DO NOT CHANGE!
 
 Maxwell.Logging = true --Log events like players leaving etc
 Maxwell.LoggingExtensive = true --More detailed logging
 
-Maxwell.AutoXP = true --Automatically give XP every interval
+Maxwell.AutoXP = true --Automatically give XP every interval, can be disabled and the addon still work.
 Maxwell.AutoXPInterval = 60 --Interval in seconds
 Maxwell.AutoXPAmount = 100 --XP to give every interval
 
