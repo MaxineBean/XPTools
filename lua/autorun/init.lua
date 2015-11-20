@@ -2,13 +2,13 @@
 
 function CalcXPReq(lvl)
 
-	return math.ceil((lvl * 72 + ((lvl+3) * 2)^2))
+	return math.ceil(((lvl * 72 + ((lvl+3) * 2)^2)*1.5)
 
 end
 
 if SERVER then
 
-	include('maxwell/core/sv_init.lua')
+	include('maxwell/sv/core/sv_init.lua')
 
 end
 
