@@ -7,10 +7,9 @@ Version: 2.0.1
 How I breakdown Version numbers: Example V.9.5.7
 
 What this means is, Full Release 9, Beta Release 5, Alpha Release 7.
-Full Release: Should not break your game 
-
-
-
+Full Release: Should not break your game, the full release is always the version on Steam.
+Beta Release: May break your game, so make backups.
+Alpha Release: This is almost gaurenteed to break at some point or another, make regular backups if running this version.
 
 Features: 
 
