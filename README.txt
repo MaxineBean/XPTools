@@ -45,6 +45,8 @@ Single files are seen as a perk Folders are seen as a category, all files inside
 
 -------FUNCTIONS VARIABLES AND HOOKS-------- 
 
+NOTE: Some of these may be removed or become obsolete do not rely on all of these being available.
+
 The following vars are available: 
 
 SERVER 
@@ -55,7 +57,7 @@ ENT.Maxwelllvl -- Entity's Level (player)
 CLIENT 
 
 Maxwell.XP -- Current XP 
-Maxwell.Level -- Current level 
+Maxwell.Level -- Current level
 Maxwell.XPReq -- XP required for next level 
 
 The following functions are available: 
