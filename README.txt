@@ -2,15 +2,14 @@ NOTE: This is the GitHub for XP-Tools Leveling System, and as such, you can get 
 
 A free Garry's Mod leveling addon 
 
-Version: 2.0.1
+Version: 3.0.1
 
 How I breakdown Version numbers: Example V.9.5.7
 
 What this means is, Full Release 9, Beta Release 5, Alpha Release 7.
-Full Release: Should not break your game 
-
-
-
+Full Release: Should not break your game, the full release is always the version on Steam.
+Beta Release: May break your game, so make backups.
+Alpha Release: This is almost gaurenteed to break at some point or another, make regular backups if running this version.
 
 Features: 
 
@@ -46,6 +45,8 @@ Single files are seen as a perk Folders are seen as a category, all files inside
 
 -------FUNCTIONS VARIABLES AND HOOKS-------- 
 
+NOTE: Some of these may be removed or become obsolete do not rely on all of these being available.
+
 The following vars are available: 
 
 SERVER 
@@ -56,7 +57,7 @@ ENT.Maxwelllvl -- Entity's Level (player)
 CLIENT 
 
 Maxwell.XP -- Current XP 
-Maxwell.Level -- Current level 
+Maxwell.Level -- Current level
 Maxwell.XPReq -- XP required for next level 
 
 The following functions are available: 
