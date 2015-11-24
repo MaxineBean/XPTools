@@ -2,8 +2,8 @@
 
 function CalcXPReq(lvl)
 
-	return math.ceil(((lvl * 72 + ((lvl+3) * 2)^2)*1.5)
-
+	return math.ceil(((lvl * 72 + ((lvl+3) * 2)^2)*1.5))
+	
 end
 
 if SERVER then

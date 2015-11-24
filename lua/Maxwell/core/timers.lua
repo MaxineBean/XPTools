@@ -17,7 +17,7 @@ if (Maxwell.AutoXP) then
 			
 			if (Maxwell.IncreasedXPHighLevel) and not (Maxwell.GroupAutoXP) and not (Maxwell.CustomGroupXP) then
 				
-				v:GiveXP(Maxwell.AutoXPAmount + (PLevel2 * 10)
+				v:GiveXP(Maxwell.AutoXPAmount + (PLevel2 * 10))
 				
 			elseif (Maxwell.IncreasedXPHighLevel) and (Maxwell.GroupAutoXP) and not (Maxwell.CustomGroupXP) then
 				

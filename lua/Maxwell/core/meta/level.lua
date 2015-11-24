@@ -78,17 +78,24 @@ if (Maxwell.CustomGroupXP) then
 	
 	end
 	
+end
+
+if (Maxwell.CustomGroupXP) then
+	
+	local MaxwellTrue = true //DO NOT CHANGE
+	local MaxwellFalse = false //DO NOT CHANGE
+	
 	function pm:MaxwellGetPlayerGroup()
 	
-		for i=1, #Maxwell.GroupXPRates do
-			if self:IsUserGroup(Maxwell.GroupXPRates[i][1]) then
-				return true
+		for i=1, #Maxwell.GroupXPAmount do
+			if self:IsUserGroup(Maxwell.GroupXPAmount[i][1]) then
+				return MaxwellTrue
 			else
-				return false
+				return MaxwellFalse
 			end
 		end
 	end	
-	
+
 end
 
 function pm:PlayerLevel()
