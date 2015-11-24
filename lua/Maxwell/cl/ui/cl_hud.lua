@@ -3,8 +3,13 @@
 
 	local ScreenW = ScrW()
 	local ScreenH = ScrH()
-	local Plevel = tonumber(PlayerLevel())
-	
+	local function PLevel()
+		for k,ply in pairs(player.GetAll()) do
+			local LEVEL = tonumber(ply:AllPlayerLevel())
+			if LEVEL == nil then return end
+			return LEVEL
+		end
+	end  
 	local function DrawDisplay()
 	local shouldDraw, players = hook.Call("HUDShouldDraw", GAMEMODE, "DarkRP_EntityDisplay")
 		if shouldDraw == false then return end
@@ -18,8 +23,8 @@
 				pos.z = pos.z + 10 -- The position we want is a bit above the position of the eyes
 				pos = pos:ToScreen()
 				pos.y = pos.y-20
-				draw.DrawText('Level: '..(Plevel or 0), "DarkRPHUD2", pos.x+1, pos.y -56, Color(0,0,0,255), 1)
-				draw.DrawText('Level: '..(Plevel or 0), "DarkRPHUD2", pos.x, pos.y -55, Color(255,255,255,200), 1)
+				draw.DrawText('Level: '..(ply:PLevel() or 1), "DarkRPHUD2", pos.x+1, pos.y -56, Color(0,0,0,255), 1)
+				draw.DrawText('Level: '..(ply:PLevel() or 1), "DarkRPHUD2", pos.x, pos.y -55, Color(255,255,255,200), 1)
 		elseif not GAMEMODE.Config.globalshow and hisPos:Distance(shootPos) < 250 then
 			local pos = hisPos - shootPos
 			local unitPos = pos:GetNormalized()
@@ -30,8 +35,8 @@
 					pos.z = pos.z + 10 -- The position we want is a bit above the position of the eyes
 					pos = pos:ToScreen()
 					pos.y = pos.y-20
-					draw.DrawText('Level: '..(Plevel or 0), "DarkRPHUD2", pos.x, pos.y -58, Color(0,0,0,255), 1)
-					draw.DrawText('Level: '..(Plevel or 0), "DarkRPHUD2", pos.x+1, pos.y -57, Color(255,255,255,200), 1)
+					draw.DrawText('Level: '..(ply:PLevel()or 1), "DarkRPHUD2", pos.x, pos.y -58, Color(0,0,0,255), 1)
+					draw.DrawText('Level: '..(ply:PLevel() or 1), "DarkRPHUD2", pos.x+1, pos.y -57, Color(255,255,255,200), 1)
 		end
 	end
  
