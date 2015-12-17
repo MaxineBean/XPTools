@@ -104,12 +104,6 @@ function pm:PlayerLevel()
 	return Level
 end
 
-function pm:AllPlayerLevel()
-	local Level2 = tonumber(self.Maxwelllvl)
-	if Level2 == nil then return end
-	return Level2
-end
-
 --LEVEL FUNCTIONS--
 
 function pm:GiveLevel( amount ) 

@@ -1,0 +1,15 @@
+[[GAG] MaDmaxwell|2|STEAM_0:0:80044739] Lua Error:
+
+[ERROR] addons/xp-tools-leveling-system/lua/maxwell/cl/ui/cl_hud.lua:32: attempt to concatenate a nil value
+  1. DrawDisplay - addons/xp-tools-leveling-system/lua/maxwell/cl/ui/cl_hud.lua:32
+   2. BaseHUDOne - addons/xp-tools-leveling-system/lua/maxwell/cl/ui/cl_hud.lua:72
+    3. fn - addons/xp-tools-leveling-system/lua/maxwell/cl/ui/cl_hud.lua:95
+     4. unknown - addons/ulib/lua/ulib/shared/hook.lua:179
+
+
+[[GAG] MaDmaxwell|2|STEAM_0:0:80044739] Lua Error:
+
+[ERROR] addons/xp-tools-leveling-system/lua/maxwell/cl/ui/cl_hud.lua:61: attempt to concatenate upvalue 'PlayerLevel' (a nil value)
+  1. BaseHUDOne - addons/xp-tools-leveling-system/lua/maxwell/cl/ui/cl_hud.lua:61
+   2. fn - addons/xp-tools-leveling-system/lua/maxwell/cl/ui/cl_hud.lua:96
+    3. unknown - addons/ulib/lua/ulib/shared/hook.lua:179

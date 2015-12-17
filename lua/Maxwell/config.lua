@@ -1,5 +1,5 @@
 Maxwell = {}
-Maxwell.Version = '2.0.1'
+Maxwell.Version = '3.0.0'
 
 Maxwell.DataType = 'pdata' --How to save / load data DO NOT CHANGE!
 
@@ -8,7 +8,7 @@ Maxwell.LoggingExtensive = true --More detailed logging
 
 Maxwell.AutoXP = true --Automatically give XP every interval, can be disabled and the addon still work.
 Maxwell.AutoXPInterval = 1 --Interval in seconds
-Maxwell.AutoXPAmount = 100 --XP to give every interval
+Maxwell.AutoXPAmount = 500 --XP to give every interval
 
 Maxwell.GroupAutoXP = true --Enable bonus XP rate ONLY from the auto-XP timer (see above)
 Maxwell.GroupXPRates = { //Sets Mulptipler for XP
