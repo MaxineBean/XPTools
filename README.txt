@@ -1,6 +1,6 @@
 NOTE: This is the GitHub for XP-Tools Leveling System, and as such, you can get the newest version of the addon here, but that also means that if you download from here, it may not be stable.
 
-NOTE: This Addon is distrubited under the Creative Commons License Version 4.0. 
+NOTE: This Addon is distrubited under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). 
 Learn more at http://creativecommons.org/licenses/by-nc-sa/4.0/
 
 A free Garry's Mod leveling addon 
